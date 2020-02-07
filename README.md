@@ -1,6 +1,6 @@
 # TL;DR
 
-DockerTrap is docker based honeypot that creates new firewalled containers for attackers to explore every time they make a connection to the host.
+DockerTrap is docker based honeypot that creates new, isolated, firewalled containers for each IP address that tries to connect to the host. Any Docker image can now be used as a honeypot!
 
 # Installation
 
