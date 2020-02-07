@@ -8,7 +8,7 @@ DockerTrap is Docker based honeypot that creates new, isolated, firewalled conta
 
 1. Firewall rules are bugged and more restrictive than intended
 2. Logging with auditd is still bugged and not working as intended
-3. Docker API honeypot `apitrap` needs a lot of work; this is intended to be avaliable to each Docker container
+3. Docker API honeypot `apitrap.sh` needs a lot of work (or replaced); this is intended to be avaliable to each Docker container
 4. Auto install still needed
 
 ## Installation
