@@ -4,13 +4,6 @@
 
 DockerTrap is Docker based honeypot that creates new, isolated, firewalled containers for each IP address that tries to connect to the host. Any Docker image can now be used as a honeypot!
 
-## TODO
-
-1. Firewall rules are bugged and more restrictive than intended
-2. Logging with auditd is still bugged and not working as intended
-3. Docker API honeypot `apitrap.sh` needs a lot of work (or replaced); this is intended to be avaliable to each Docker container
-4. Auto install still needed
-
 ## Installation
 
 ### Install the necessary software
@@ -80,3 +73,14 @@ A Dockerfile for a base image is included in the `alpinetrap` directory and sets
 ### Final install notes
 
 Make sure to commit the image as "`honeypot:latest`". You may also wish to create additional accounts named `user`, `guest`, `admin`, `temp`, etc., and give them weak passwords like `1234`, or `password` to let brute-force attackers crack your host easily. The IP address of the attacker's host is passed to the container in the environment variable `REMOTE_HOST`. For logging, you may want to configure an rsyslog instance to forward logs to the host machine.
+
+## TODO
+
+1. Firewall rules are bugged and more restrictive than intended
+2. Logging with auditd is still bugged and not working as intended
+3. Docker API honeypot `apitrap.sh` needs a lot of work (or replaced); this is intended to be avaliable to each Docker container
+4. Auto install still needed
+
+## Attribution
+
+Thanks goes to [Peter Kasza](https://github.com/mrschyte) for the origional [Dockerpot](https://github.com/mrschyte/dockerpot); brilliant work.
