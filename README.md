@@ -77,6 +77,6 @@ auditctl -a exit,always -F arch=b32 -S execve
 
 A Dockerfile for a base image is included in the `alpinetrap` directory and sets to root password to `root` by default. You can create and configure your own base image without restriction. The container will spin up and be managed by xinitd normally. Any initialization is up to you.
 
-### Final Notes
+### Final install notes
 
 Make sure to commit the image as "`honeypot:latest`". You may also wish to create additional accounts named `user`, `guest`, `admin`, `temp`, etc., and give them weak passwords like `1234`, or `password` to let brute-force attackers crack your host easily. The IP address of the attacker's host is passed to the container in the environment variable `REMOTE_HOST`. For logging, you may want to configure an rsyslog instance to forward logs to the host machine.
