@@ -83,4 +83,4 @@ Make sure to commit the image as "`honeypot:latest`". You may also wish to creat
 
 ## Attribution
 
-Thanks goes to [Peter Kasza](https://github.com/mrschyte) for the origional [Dockerpot](https://github.com/mrschyte/dockerpot); brilliant work.
+Thanks goes to [Peter Kasza](https://github.com/mrschyte) for the origional [Dockerpot](https://github.com/mrschyte/dockerpot); brilliant work!
