@@ -15,12 +15,11 @@ DockerTrap is Docker based honeypot that creates new, isolated, firewalled conta
 
 ### Install the necessary software
 
-~~~ shell
-$ sudo apt-get update
-$ sudo apt-get install docker.io socat xinetd auditd
+Install [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/)
 
-$ # for installing nsenter
-$ docker run --rm -v /usr/local/bin:/target jpetazzo/nsenter
+~~~ shell
+sudo apt-get update
+sudo apt-get install docker.io socat xinetd auditd
 ~~~
 
 ### Install the honeypot scripts 
@@ -29,7 +28,7 @@ Copy `honeypot` to `/usr/bin/honeypot` and `honeypot.clean` to
 `/usr/bin/honeypot.clean` and make them executable. You may have to
 customize the ports in the iptables rules, the memory limit of the
 container and the network quota if you want to run anything other than
-an SSH honeypot on port 22.
+an SSH honeypot on port `22`.
 
 ### Configure crond, xinetd and auditd
 
@@ -76,4 +75,8 @@ auditctl -a exit,always -F arch=b32 -S execve
 
 ### Create a base image for the honeypot
 
-A Dockerfile for a base image is included with a default root password of `root`. You can create and configure your own base image. The container spin up and be managed by xinitd normally. Any initialization is up to you, so be sure to initialized iplace your initialization script there or configure an init system of your choice. Make sure to commit the image as "honeypot:latest". You should also create an account named `user` and give it a weak password like `123456` to let brute-force attackers crack your host. The ip address of the attacker's host is passed to the container in the environment variable "REMOTE_HOST". For logging you might want to additionally configure an rsyslog instance to forward logs to the host machine.
+A Dockerfile for a base image is included in the `alpinetrap` directory and sets to root password to `root` by default. You can create and configure your own base image without restriction. The container will spin up and be managed by xinitd normally. Any initialization is up to you.
+
+### Final Notes
+
+Make sure to commit the image as "`honeypot:latest`". You may also wish to create additional accounts named `user`, `guest`, `admin`, `temp`, etc., and give them weak passwords like `1234`, or `password` to let brute-force attackers crack your host easily. The IP address of the attacker's host is passed to the container in the environment variable `REMOTE_HOST`. For logging, you may want to configure an rsyslog instance to forward logs to the host machine.
