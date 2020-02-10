@@ -89,7 +89,7 @@ Make sure to commit the image as "`honeypot:latest`". You may also wish to creat
 
 1. Firewall rules are bugged and more restrictive than intended
 2. Logging with auditd is still bugged and not working as intended
-3. Docker API honeypot `apitrap.sh` will be replaced by something like [Whaler](https://github.com/oncyberblog/whaler); but should appear as an unsecured host to each honeypot.
+3. Docker API honeypot `apitrap.sh` will be replaced by something like [Whaler](https://github.com/oncyberblog/whaler) (redirected from a secured host); but should appear as an unsecured host to each honeypot.
 4. Auto install still needed
 
 ## Attribution
