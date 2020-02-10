@@ -1,13 +1,19 @@
 # DockerTrap
 
 <div align="center">
-	<img width="600" src="dockertrap.png">
+	<img width="500" src="dockertrap.png">
 </div>
 
 
 ## TL;DR
 
 DockerTrap is Docker based honeypot that creates new, isolated, firewalled containers for each IP address that tries to connect to the host. Any Docker image can now be used as a honeypot! No restrictions!
+
+## System Design
+
+<div align="center">
+	<img width="900" src="DockerTrap System Design.png">
+</div>
 
 ## Installation for Ubuntu 18.04 LTS
 
