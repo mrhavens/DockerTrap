@@ -1,7 +1,7 @@
 # DockerTrap
 
 <div align="center">
-	<img width="500" src="dockertrap.png">
+	<img width="450" src="dockertrap.png">
 </div>
 
 
