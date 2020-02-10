@@ -9,12 +9,6 @@
 
 DockerTrap is Docker based honeypot that creates new, isolated, firewalled containers for each IP address that tries to connect to the host. Any Docker image can now be used as a honeypot! No restrictions!
 
-## System Design
-
-<div align="center">
-	<img width="900" src="DockerTrap-System-Diagram.png">
-</div>
-
 ## Installation for Ubuntu 18.04 LTS
 
 ### Install the necessary software
@@ -84,6 +78,12 @@ A Dockerfile for a base image is included in the `alpinetrap` directory and sets
 ### Final install notes
 
 Make sure to commit the image as "`honeypot:latest`". You may also wish to create additional accounts named `user`, `guest`, `admin`, `temp`, etc., and give them weak passwords like `1234`, or `password` to let brute-force attackers crack your host easily. The IP address of the attacker's host is passed to the container in the environment variable `REMOTE_HOST`. For logging, you may want to configure an rsyslog instance to forward logs to the host machine.
+
+## System Design
+
+<div align="center">
+	<img width="900" src="DockerTrap-System-Diagram.png">
+</div>
 
 ## TODO
 
