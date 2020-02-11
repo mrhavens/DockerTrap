@@ -4,7 +4,6 @@
 	<img width="450" src="dockertrap.png">
 </div>
 
-
 ## TL;DR
 
 DockerTrap is Docker based honeypot that creates new, isolated, firewalled containers for each IP address that tries to connect to the host. Any Docker image can now be used as a honeypot! No restrictions!
@@ -19,11 +18,20 @@ DockerTrap is Docker based honeypot that creates new, isolated, firewalled conta
 
 ### Install the necessary software
 
-Install [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/)
+Install [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/).
+```
+sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt -y install docker-ce
+```
 
+Install supporting system tools.
 ~~~ shell
 sudo apt-get update
-sudo apt-get install docker.io socat xinetd auditd
+sudo apt-get install socat xinetd auditd
 ~~~
 
 ### Install the honeypot scripts 
