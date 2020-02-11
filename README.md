@@ -16,9 +16,7 @@ DockerTrap is Docker based honeypot that creates new, isolated, firewalled conta
 
 ## Installation for Ubuntu 18.04 LTS
 
-### Install the necessary software
-
-#### Install [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/)
+### Install [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/)
 ```
 sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -28,7 +26,7 @@ apt-cache policy docker-ce
 sudo apt -y install docker-ce
 ```
 
-#### Install supporting system tools
+### Install supporting system tools
 ~~~ shell
 sudo apt-get update
 sudo apt-get install socat xinetd auditd
