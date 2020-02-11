@@ -46,7 +46,6 @@ REMOTE_HOST=`echo ${REMOTE_HOST} | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1
 	/sbin/iptables -t nat -A PREROUTING -i ${EXT_IFACE} -s ${REMOTE_HOST} -p tcp --dport ${SERVICE} -j DNAT --to-destination ${CONTAINER_IP}
 	/sbin/iptables -t nat -A POSTROUTING -j MASQUERADE
     fi
-    echo ${CONTAINER_IP}
 } &> /dev/null
 
 # forward traffic to the container
