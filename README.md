@@ -29,7 +29,7 @@ sudo apt -y install docker-ce
 ### Install supporting system tools
 ~~~ shell
 sudo apt-get update
-sudo apt-get install socat xinetd auditd
+sudo apt-get install socat xinetd auditd netcat
 ~~~
 
 ### Install the honeypot scripts 
