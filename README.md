@@ -11,7 +11,7 @@ DockerTrap is Docker based honeypot that creates new, isolated, firewalled conta
 ## System Design
 
 <div align="center">
-	<img width="700" src="DockerTrap-System-Diagram.png">
+	<img width="750" src="DockerTrap-System-Diagram.png">
 </div>
 
 ## Installation for Ubuntu 18.04 LTS
